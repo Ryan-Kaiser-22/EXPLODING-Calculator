@@ -12,20 +12,28 @@ function operate(arr) {
     const a = parseFloat(arr[0]);
     const op = arr[1];
     const b = parseFloat(arr[2]);
-    
+    let result;
     switch (op) {
         case '+':
-            return (a + b);
+            result = (a + b);
+            break;
         case '-':
-            return (a - b);
+            result = (a - b);
+            break;
         case '÷':
             if (b === 0) {
-                return "ERROR, SEFL DESTRUCT"
+                return "SELF DESTRUCT"
             }
-            return (a / b);
+            result = (a / b);
+            break;
         case 'x':
-            return (a * b);
-    }
+            result = (a * b);
+            break;
+        }
+    return result.toLocaleString('en-US', {
+        maximumFractionDigits: 3,
+        useGrouping: false
+    });
 }
 
 const equalButton = document.getElementById('=');
@@ -35,8 +43,6 @@ equalButton.addEventListener('click', () => {
     const windowArr = windowStr.split(" ");
     displayWindow.textContent = operate(windowArr);
 });
-
-
 
 const clearButton = document.getElementById('C');
 

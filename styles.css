@@ -14,8 +14,9 @@ body {
     border: 3px solid black;
     text-align: right;
     background-color: white;
-    height: 16px;
+    height: 24px;
     font-family: 'VT323', monospace;
+    font-size: 20px;
     color: #4CAF50;
     background-color: #222;
 }
@@ -29,6 +30,8 @@ body {
 button {
     background-color: rgb(152, 152, 192);
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
 }
 
 button:hover {
